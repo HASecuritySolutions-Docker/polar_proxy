@@ -7,4 +7,4 @@ VOLUME ["/var/log/PolarProxy/", "/home/polarproxy/"]
 USER polarproxy
 WORKDIR /opt/polarproxy/
 ENTRYPOINT ["dotnet", "PolarProxy.dll"]
-CMD ["-v", "-p", "10443,80,443", "-o", "/var/log/PolarProxy/", "--certhttp", "10080", "--pcapoverip", "0.0.0.0:57012"]
+CMD ["-v", "-p", "10443,80,443", "-o", "/var/log/PolarProxy/", "--certhttp", "10080", "--pcapoverip", "0.0.0.0:57012", "-x", "/var/log/PolarProxy/polarproxy.pem"]
